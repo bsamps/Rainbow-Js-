@@ -1,4 +1,8 @@
-let girar;
+var colours = [
+    'red', 'orange', 'yellow', 'green', 'blue', 'purple'
+];
+
+
 
 function addcolour(colour) {
     var rainbowEl = document.querySelector('.container')
@@ -8,17 +12,14 @@ function addcolour(colour) {
     div.style.backgroundColor = colour;
     rainbowEl.appendChild(div);
 }
-var colours = [
-    'red', 'orange', 'yellow', 'green', 'blue', 'purple'
-];
 
 
+//girar();
 
-
-function iniciar() {
+function girar() {
     girarArray();
 }
-
+//Função Girar array pega item que esta no local 0 e poem no local 5
 function girarArray(cores) {
     for (let i in colours) {
         var indexOf = i;
@@ -39,10 +40,10 @@ function girarArray(cores) {
 }
 
 
-function chamarfunc(callback, array) {
+function chamarFunc(callback, array) {
     for (let i in array) {
         callback(array[i])
 
     }
 }
-chamarfunc(addcolour, colours);
+chamarFunc(addcolour, colours);
